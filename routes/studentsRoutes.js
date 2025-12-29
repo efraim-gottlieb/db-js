@@ -6,4 +6,7 @@ router.route("/")
   .get(studentsController.getStudents)
   .post(studentsController.addStudent)
 
+router.route("/:id")
+  .get(studentsController.getStudentById)
+
 export default router;

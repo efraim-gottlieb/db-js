@@ -17,6 +17,12 @@ export async function addStudent(req, res) {
     res.status(201).json({ success: students[students.length - 1] });
   }
 }
+
+export async function getStudentById(req, res) {
+  const id = req.params.id
+  const result = await DB.select("students", `id = ${id}`);
+  res.json({ success: result });
+}
 export async function getStudents(req, res) {
   const students = await DB.select("students");
   res.json({ count: students.length, students });
