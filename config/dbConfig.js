@@ -12,4 +12,4 @@ export async function createConn(host, user, password, database) {
   return conn;
 }
 
-export const conn = await createConn("localhost", "root", "root", "mydb");
+export const conn = await createConn("localhost", "root", "root", "school_db");
