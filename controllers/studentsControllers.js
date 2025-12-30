@@ -27,3 +27,4 @@ export async function getStudents(req, res) {
   const students = await DB.select("students");
   res.json({ count: students.length, students });
 }
+
