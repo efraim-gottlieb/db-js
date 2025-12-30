@@ -10,13 +10,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "example": "nodemon --env-file=.env sqlExamples.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "mongo": "node --env-file=.env mongo.js",
+    "fd": "find-duplicates",
+    "fd-ui": "find-duplicates-ui"
   },
   "dependencies": {
     "express": "^5.2.1",
+    "mongodb": "^7.0.0",
     "morgan": "^1.10.1",
     "mysql2": "^3.16.0",
     "nodemod": "^3.0.6",
     "nodemon": "^3.1.11"
+  },
+  "devDependencies": {
+    "find-duplicate-js": "^1.1.1"
   }
 }
